@@ -7,34 +7,29 @@ This project help me improve my skills in Microsoft Excel using functions such a
 
 Here are the steps I followed during the creation of this project:
 
-### Step 1- 
-
-Opened excel file and reviewed the data. We have 3 seperate worksheets each containing data for Orders, Customers and Products. Each 
-   worksheet contains a primary key (Order ID, Customer ID & Product ID)
+### Step 1
+Opened excel file and reviewed the data. We have 3 seperate worksheets each containing data for Orders, Customers and Products. Each worksheet contains a primary key (Order ID, Customer ID & Product ID)
 
 
-2- Converted data into a table. We could do this in a later step, but I find the data is easier to read and clearer in a table format. 
-   Also, this will allow us to created pivot tables later on. 
+### Step 1
+Converted data into a table. We could do this in a later step, but I find the data is easier to read and clearer in a table format.  
+Also, this will allow us to created pivot tables later on. 
 
 
-3- Used XLOOKUP function to create 3 new columns (Customer name, Email, Country) in the "Orders" table. This is done using data from the 
-   "Customers" table and then transferring this data to the orders table. Thus, we are basically joining data from the customers table to 
-   the orders table (we will then use this data for analysis). The formula is the following: 
+### Step 3
+Used XLOOKUP function to create 3 new columns (Customer name, Email, Country) in the "Orders" table. This is done using data from the "Customers" table and then transferring this data to the orders table. Thus, we are basically joining data from the customers table to the orders table (we will then use this data for analysis). The formula is the following: 
    
-   =XLOOKUP(C2,customers!$A$1:$A$1001, customers!$B$1:$B$1001,,0). 
+=XLOOKUP(C2,customers!$A$1:$A$1001, customers!$B$1:$B$1001,,0). 
    
-   I then clicked on the bottom right of the cell with the XLOOKUP function in order to auto-populate the column. I conducted similar 
-   steps for the email and country column. However, for the email column, I wrapped the XLOOKUP function within a IF statement, since we 
-   getting the value 0 for customers with no email. I used the following IF statement: 
+I then clicked on the bottom right of the cell with the XLOOKUP function in order to auto-populate the column. I conducted similar steps for the email and country column. However, for the email column, I wrapped the XLOOKUP function within a IF statement, since we getting the value 0 for customers with no email. I used the following IF statement: 
   
-   =IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001, customers!$C$1:$C$1001,,0)) 
+=IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001, customers!$C$1:$C$1001,,0)) 
  
-   This will replace all 0 values with a null value.
+This will replace all 0 values with a null value.
 
 
-4- Used the INDEX and MATCH functions to populate the columns Coffee Type, Roast Type and Size. I could use the XLOOKUP function as 
-   I did before, but the INDEX and MATCH funtions will allow me to populate all three columns using only one formula. I use the data from 
-   the product table within the formula. The formula is the following: 
+### Step 1
+Used the INDEX and MATCH functions to populate the columns Coffee Type, Roast Type and Size. I could use the XLOOKUP function as I did before, but the INDEX and MATCH funtions will allow me to populate all three columns using only one formula. I use the data from the product table within the formula. The formula is the following: 
   
    =INDEX(products!$A$1:$G$49, MATCH(orders!$D2,products!$A$1:$A$49,0), MATCH(orders!I$1,products!$A$1:$G$1,0))
 
