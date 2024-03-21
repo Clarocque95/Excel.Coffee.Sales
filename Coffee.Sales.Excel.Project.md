@@ -31,9 +31,9 @@ This will replace all 0 values with a null value.
 ### Step 4
 Used the INDEX and MATCH functions to populate the columns Coffee Type, Roast Type and Size. I could use the XLOOKUP function as I did before, but the INDEX and MATCH funtions will allow me to populate all three columns using only one formula. I use the data from the product table within the formula. The formula is the following: 
   
-   =INDEX(products!$A$1:$G$49, MATCH(orders!$D2,products!$A$1:$A$49,0), MATCH(orders!I$1,products!$A$1:$G$1,0))
+=INDEX(products!$A$1:$G$49, MATCH(orders!$D2,products!$A$1:$A$49,0), MATCH(orders!I$1,products!$A$1:$G$1,0))
 
-   Finally, I can auto-populate all three columns
+Finally, I can auto-populate all three columns
 
 
 ### Step 5
@@ -59,13 +59,11 @@ Used the "Remove Duplicates" feature to verify if the data had any duplicate row
 
 
 ### Step 9
-Inserted pivot table on a new worksheet using the data from the "Orders" table. I renamed the new worksheet "Total Sales". In this 
-   worksheet, I created a pivot table showing total sales for every coffee type by years and quarters. Next, I created a pivot chart 
-   using the data from the pivot table. This line chart will show total sales over time for every coffee type. 
+Inserted pivot table on a new worksheet using the data from the "Orders" table. I renamed the new worksheet "SalesLineChart". In this worksheet, I created a pivot table showing total sales for every coffee type by years and quarters. Next, I created a pivot chart using the data from the pivot table. This line chart will show total sales over time for every coffee type.
 
 
 ### Step 10
-Created timeline using the pivot chart. This timeline will us filter the data using dates. For example, selecting Q1-Q4 of 2019 in the timeline will make the pivot only show data from 2019. 
+Created timeline using the pivot chart. This timeline will allow us to filter the data using dates. For example, selecting Q1-Q4 of 2019 in the timeline will make the pivot table (and, consequently, the pivot chart) only show data from 2019. 
 
 
 ### Step 11
@@ -79,15 +77,20 @@ Inserted 3 slicers for "Size", "Roast Type Name" and "Loyalty Card". Theses slic
 
 
 ### Step 13
-Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart". Modified the pivot table by removing everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
+Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart". Modified the pivot table by removing everything except "Sum of Sales" and added "Country". I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
 
 
 ### Step 14
-Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart. Modified the pivot table by removing everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
+Copied the "TotalSales" worksheet and create a new worksheet which I renamed "TopCustomers". Modified the pivot table by removing "Country" and added "Customer Name". Also, with the help of value filters feature, the pivot only shows the top 5 customers (customers with most sales). I then created a pivot chart using the data from the pivot table.
 
 
 ### Step 15
-Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart. Modified the pivot table by removing everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country.
+Copied the "TotalSales" worksheet and create a new worksheet which I renamed "SalesBarChart". Modified the pivot table by removing "Quarters". I then created a pivot chart using the data from the pivot table. This side-by-side bar chart will show total sales for every coffee type by year. 
 
 
-Here is the final dashboard. Once again, this dashboard is fully dynamic with 
+### Step 16
+Created two more pivot tables within a new sheet called "Dashboard". These pivot tables act like cards in Power BI and Tableau. The first pivot table shows the total sales and the second pivot table shows the total transactions. 
+
+
+### Step 17
+Added the timeline, all three slicers and every chart to the dashboard worksheet and verified that all filters are working properly.
