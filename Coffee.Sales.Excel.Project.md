@@ -1,4 +1,4 @@
-## Excel Dashboard - Coffe Sales
+# Excel Dashboard - Coffe Sales
 
 This is an excel project in which I created an interactive and dynamic dashboard showing interesting KPI's using mock coffee sales data.
 
@@ -7,7 +7,9 @@ This project help me improve my skills in Microsoft Excel using functions such a
 
 Here are the steps I followed during the creation of this project:
 
-1- Opened excel file and reviewed the data. We have 3 seperate worksheets each containing data for Orders, Customers and Products. Each 
+### Step 1- 
+
+Opened excel file and reviewed the data. We have 3 seperate worksheets each containing data for Orders, Customers and Products. Each 
    worksheet contains a primary key (Order ID, Customer ID & Product ID)
 
 
