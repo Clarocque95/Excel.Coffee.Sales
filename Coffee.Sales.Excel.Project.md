@@ -1,4 +1,4 @@
-# Excel Dashboard - Coffe Sales
+## Excel Dashboard - Coffe Sales
 
 This is an excel project in which I created an interactive and dynamic dashboard showing interesting KPI's using mock coffee sales data.
 
