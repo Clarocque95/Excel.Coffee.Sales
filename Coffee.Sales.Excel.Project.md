@@ -4,14 +4,14 @@ This is an excel project in which I created an interactive and dynamic dashboard
 
 This project help me improve my skills in Microsoft Excel using functions such as XLOOKUP, INDEX and IF statements. I also practiced creating creating pivot tables and interesting data visualizations. Finally, I spent most of the time creating a dynamic dashboard by creating appropriate filters and slicers. 
 
-
 Here are the steps I followed during the creation of this project:
+
 
 ### Step 1
 Opened excel file and reviewed the data. We have 3 seperate worksheets each containing data for Orders, Customers and Products. Each worksheet contains a primary key (Order ID, Customer ID & Product ID)
 
 
-### Step 1
+### Step 2
 Converted data into a table. We could do this in a later step, but I find the data is easier to read and clearer in a table format.  
 Also, this will allow us to created pivot tables later on. 
 
@@ -28,7 +28,7 @@ I then clicked on the bottom right of the cell with the XLOOKUP function in orde
 This will replace all 0 values with a null value.
 
 
-### Step 1
+### Step 4
 Used the INDEX and MATCH functions to populate the columns Coffee Type, Roast Type and Size. I could use the XLOOKUP function as I did before, but the INDEX and MATCH funtions will allow me to populate all three columns using only one formula. I use the data from the product table within the formula. The formula is the following: 
   
    =INDEX(products!$A$1:$G$49, MATCH(orders!$D2,products!$A$1:$A$49,0), MATCH(orders!I$1,products!$A$1:$G$1,0))
@@ -36,55 +36,58 @@ Used the INDEX and MATCH functions to populate the columns Coffee Type, Roast Ty
    Finally, I can auto-populate all three columns
 
 
-4- Created a Sales column using the following simple formula: =L2*E2. This is multiplying the "Quantity" column with the "Unit Price" 
-   column. I then auto-populated the rest of the column. 
+### Step 5
+Created a Sales column using the following simple formula: =L2*E2. This is multiplying the "Quantity" column with the "Unit Price" column. I then auto-populated the rest of the column. 
 
 
-5- Used an IF function to created column "Coffe Type Name" which will have the full name of the coffee and not just the 3 letter 
-   abbrivations we see in the "Coffee Type" column. The following formula is used : 
+### Step 6
+Used an IF function to created column "Coffe Type Name" which will have the full name of the coffee and not just the 3 letter abbrivations we see in the "Coffee Type" column. The following formula is used : 
 
-   =IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))
+=IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))
 
-   A similar procces is used to created column "Roast Type Name" that will include the full name instead of only the first letter as we 
-   see in column "Roast Type". The following formula is used: 
+A similar procces is used to created column "Roast Type Name" that will include the full name instead of only the first letter as we see in column "Roast Type". The following formula is used: 
 
-  =IF(J2="M","Medium",IF(J2="L","Light",IF(J2="D","Dark","")))
-
-
-6- Changed the data format of the "Order Date" column. I replaced the DD/MM/YYYY format with the DD-MMM-YYYY format. For example, instead 
-   of 01/01/2019, the format is 01-Jan-2019. I also changed the format for coffee size. Instead of only showing a number, all the data 
-   will also include a decimal and the letters "kg" at the end. For example, instead of 1, the format is now 1.0. Finally, I changed the 
-   format in the "Sales" column and included a dollar sign.
+=IF(J2="M","Medium",IF(J2="L","Light",IF(J2="D","Dark","")))
 
 
-7- Used the "Remove Duplicates" feature to verify if the data had any duplicate rows. The data had no duplicates.
+### Step 7
+Changed the data format of the "Order Date" column. I replaced the DD/MM/YYYY format with the DD-MMM-YYYY format. For example, instead of 01/01/2019, the format is 01-Jan-2019. I also changed the format for coffee size. Instead of only showing a number, all the data will also include a decimal and the letters "kg" at the end. For example, instead of 1, the format is now 1.0. Finally, I changed the format in the "Sales" column and included a dollar sign.
 
 
-9- Inserted pivot table on a new worksheet using the data from the "Orders" table. I renamed the new worksheet "Total Sales". In this 
+### Step 8
+Used the "Remove Duplicates" feature to verify if the data had any duplicate rows. The data had no duplicates.
+
+
+### Step 9
+Inserted pivot table on a new worksheet using the data from the "Orders" table. I renamed the new worksheet "Total Sales". In this 
    worksheet, I created a pivot table showing total sales for every coffee type by years and quarters. Next, I created a pivot chart 
    using the data from the pivot table. This line chart will show total sales over time for every coffee type. 
 
 
-10- Created timeline using the pivot chart. This timeline will us filter the data using dates. For example, selecting Q1-Q4 of 2019 in 
-    the timeline will make the pivot only show data from 2019. 
+### Step 10
+Created timeline using the pivot chart. This timeline will us filter the data using dates. For example, selecting Q1-Q4 of 2019 in the timeline will make the pivot only show data from 2019. 
 
 
-11- Created the colunm "Loyalty Card" using XLOOKUP function. This is the formula: 
+### Step 11
+Created the colunm "Loyalty Card" using XLOOKUP function. This is the formula: 
 
-   =XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)
+=XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)
 
 
-12- Inserted 3 slicers for "Size", "Roast Type Name" and "Loyalty Card". Theses slicers will also be used to filter the data in the 
-    dashboard. 
+### Step 12
+Inserted 3 slicers for "Size", "Roast Type Name" and "Loyalty Card". Theses slicers will also be used to filter the data in the dashboard. 
 
-13- Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart". Modified the pivot table by removing 
-    everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a 
-    pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
 
-14- Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart. Modified the pivot table by removing 
-    everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a 
-    pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
+### Step 13
+Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart". Modified the pivot table by removing everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
 
+
+### Step 14
+Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart. Modified the pivot table by removing everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
+
+
+### Step 15
+Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart. Modified the pivot table by removing everything except "Sum of Sales" and added "Country". Thus, the pivot table shows total sales for every country. I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country.
 
 
 Here is the final dashboard. Once again, this dashboard is fully dynamic with 
