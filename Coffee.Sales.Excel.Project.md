@@ -12,8 +12,7 @@ Opened Excel file and reviewed the data. We have three (3) seperate worksheets e
 
 
 ### Step 2
-Converted data into a table. We could do this in a later step, but I find the data is easier to read and clearer in a table format.  
-Also, this will allow us to created pivot tables later on. 
+Converted the data into a table. We could do this in a later step, but I find the data is easier to read and clearer in a table format. Also, this will allow us to created pivot tables later on in our analysis. 
 
 
 ### Step 3
