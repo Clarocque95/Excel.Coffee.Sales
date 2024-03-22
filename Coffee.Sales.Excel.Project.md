@@ -1,18 +1,18 @@
-# Excel Dashboard - Coffe Sales
+# Excel Dashboard - Coffee Sales
 
 This is a Microsoft Excel project in which I created an interactive and dynamic dashboard showing interesting KPI's using mock coffee sales data.
 
-This project helped me improve my skills in MS Excel using functions such as XLOOKUP, INDEX and IF statements. I also practiced creating creating pivot tables and interesting data visualizations. Finally, I refined my dashboarding skills and created appropriate filters and slicers that provided useful insights.  
+This project helped me improve my skills in MS Excel using functions such as XLOOKUP, INDEX and IF statements. I also practiced creating pivot tables and interesting data visualizations. Finally, I refined my dashboarding skills and created appropriate filters and slicers that provided useful insights.  
 
 Here are the steps I followed during the creation of this project:
 
 
 ### Step 1
-Opened Excel file and reviewed the data. We have three (3) seperate worksheets each containing data for Orders, Customers and Products. Each worksheet contains a primary key (Order ID, Customer ID & Product ID).
+Opened Excel file and reviewed the data. We have three (3) separate worksheets each containing data for Orders, Customers and Products. Each worksheet contains a primary key (Order ID, Customer ID & Product ID).
 
 
 ### Step 2
-Converted the data into a table. We could do this in a later step, but I find the data is easier to read and clearer in a table format. Also, this will allow us to created pivot tables later on in our analysis. 
+Converted the data into a table. We could do this in a later step, but I find the data is easier to read and clearer in a table format. Also, this will allow us to create pivot tables. 
 
 
 ### Step 3
