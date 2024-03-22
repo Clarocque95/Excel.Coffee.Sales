@@ -16,11 +16,11 @@ Converted the data into a table. We could do this in a later step, but I find th
 
 
 ### Step 3
-Used XLOOKUP function to create 3 new columns (Customer name, Email, Country) in the "Orders" table. This is done using data from the "Customers" table and then transferring this data to the orders table. Thus, we are basically joining data from the customers table to the orders table (we will then use this data for analysis). The formula is the following: 
+Used XLOOKUP function to create 3 new columns (Customer name, Email, Country) in the "Orders" table. This is done using data from the "Customers" table and then transferring this data into the orders table. Thus, we are basically joining the data from the customers table to the orders table (we will then use this data for analysis). The formula is the following: 
    
 =XLOOKUP(C2,customers!$A$1:$A$1001, customers!$B$1:$B$1001,,0). 
    
-I then clicked on the bottom right of the cell with the XLOOKUP function in order to auto-populate the column. I conducted similar steps for the email and country column. However, for the email column, I wrapped the XLOOKUP function within a IF statement, since we getting the value 0 for customers with no email. I used the following IF statement: 
+I then clicked on the bottom right of the cell with the XLOOKUP function to auto-populate the column. I conducted similar steps for the "email" and "country" column. However, for the email column, I wrapped the XLOOKUP function within an IF statement, since we are obtaining the value 0 for customers with no email. I used the following IF statement: 
   
 =IF(XLOOKUP(C2,customers!$A$1:$A$1001,customers!$C$1:$C$1001,,0)=0,"",XLOOKUP(C2,customers!$A$1:$A$1001, customers!$C$1:$C$1001,,0)) 
  
@@ -40,7 +40,7 @@ Created a Sales column using the following simple formula: =L2*E2. This is multi
 
 
 ### Step 6
-Used an IF function to created column "Coffe Type Name" which will have the full name of the coffee and not just the 3 letter abbrivations we see in the "Coffee Type" column. The following formula is used : 
+Used an IF function to create the column "Coffee Type Name" which will have the full name of the coffee and not just the 3 letter abbreviations we see in the "Coffee Type" column. The following formula is used: 
 
 =IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))
 
@@ -50,7 +50,7 @@ A similar procces is used to created column "Roast Type Name" that will include 
 
 
 ### Step 7
-Changed the data format of the "Order Date" column. I replaced the DD/MM/YYYY format with the DD-MMM-YYYY format. For example, instead of 01/01/2019, the format is 01-Jan-2019. I also changed the format for coffee size. Instead of only showing a number, all the data will also include a decimal and the letters "kg" at the end. For example, instead of 1, the format is now 1.0. Finally, I changed the format in the "Sales" column and included a dollar sign.
+Changed the data format of the "Order Date" column. I replaced the DD/MM/YYYY format with the DD-MMM-YYYY format. For example, instead of 01/01/2019, the format is now 01-Jan-2019. I also changed the format for the "coffee size" column. Instead of only showing a number, the data will also include a decimal and the letters "kg" at the end. For example, instead of 1, the format is now 1.0 kg. Finally, I changed the format in the "Sales" column and included a dollar sign.
 
 
 ### Step 8
