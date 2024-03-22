@@ -28,15 +28,15 @@ This will replace all 0 values with a null value.
 
 
 ### Step 4
-Used the INDEX and MATCH functions to populate the columns Coffee Type, Roast Type and Size. I could use the XLOOKUP function as I did before, but the INDEX and MATCH funtions will allow me to populate all three columns using only one formula. I use the data from the product table within the formula. The formula is the following: 
+Used the INDEX and MATCH functions to populate the following columns: Coffee Type, Roast Type and Size. I could use the XLOOKUP function as I did before, but the INDEX and MATCH functions will allow me to populate all three columns using only one formula. I use the data from the product table within the formula. The formula is the following: 
   
 =INDEX(products!$A$1:$G$49, MATCH(orders!$D2,products!$A$1:$A$49,0), MATCH(orders!I$1,products!$A$1:$G$1,0))
 
-Finally, I can auto-populate all three columns
+Finally, I can auto-populate all three columns.
 
 
 ### Step 5
-Created a Sales column using the following simple formula: =L2*E2. This is multiplying the "Quantity" column with the "Unit Price" column. I then auto-populated the rest of the column. 
+Created a Sales column using the following simple formula: =L2*E2. This formula is multiplying the "Quantity" column with the "Unit Price" column. I then auto populated the rest of the column. 
 
 
 ### Step 6
@@ -44,7 +44,7 @@ Used an IF function to create the column "Coffee Type Name" which will have the 
 
 =IF(I2="Rob","Robusta",IF(I2="Exc","Excelsa",IF(I2="Ara","Arabica",IF(I2="Lib","Liberica",""))))
 
-A similar procces is used to created column "Roast Type Name" that will include the full name instead of only the first letter as we see in column "Roast Type". The following formula is used: 
+A similar process is used to create the column "Roast Type Name" that will include the full name instead of only the first letter as we see in column "Roast Type". The following formula is used: 
 
 =IF(J2="M","Medium",IF(J2="L","Light",IF(J2="D","Dark","")))
 
