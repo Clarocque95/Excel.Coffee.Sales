@@ -84,11 +84,11 @@ Copied the "TotalSales" worksheet and create a new worksheet which I renamed "To
 
 
 ### Step 15
-Copied the "TotalSales" worksheet and create a new worksheet which I renamed "SalesBarChart". Modified the pivot table by removing "Quarters". I then created a pivot chart using the data from the pivot table. This side-by-side bar chart will show total sales for every coffee type by year. 
+Copied the "TotalSales" worksheet and created a new worksheet which I renamed "SalesBarChart". Modified the pivot table by removing "Quarters". I then created a pivot chart using the data from the pivot table. This side-by-side bar chart will show the total sales for every coffee type by year. 
 
 
 ### Step 16
-Created two more pivot tables within a new sheet called "Dashboard". These pivot tables act like cards in Power BI and Tableau. The first pivot table shows the total sales and the second pivot table shows the total transactions. 
+Created two more pivot tables within a new sheet called "Dashboard". These pivot tables act like cards in Power BI and Tableau. The first pivot table shows the total sales, and the second pivot table shows the total transactions. 
 
 
 ### Step 17
