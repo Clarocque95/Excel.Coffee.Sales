@@ -58,29 +58,29 @@ Used the "Remove Duplicates" feature to verify if the data had any duplicate row
 
 
 ### Step 9
-Inserted pivot table on a new worksheet using the data from the "Orders" table. I renamed the new worksheet "SalesLineChart". In this worksheet, I created a pivot table showing total sales for every coffee type by years and quarters. Next, I created a pivot chart using the data from the pivot table. This line chart will show total sales over time for every coffee type.
+Inserted a pivot table on a new worksheet using the data from the "Orders" table. I renamed the new worksheet "SalesLineChart". In this worksheet, I created a pivot table showing total sales for every coffee type by years and quarters. Next, I created a pivot chart using the data from the pivot table. This line chart will show total sales over time for every coffee type.
 
 
 ### Step 10
-Created timeline using the pivot chart. This timeline will allow us to filter the data using dates. For example, selecting Q1-Q4 of 2019 in the timeline will make the pivot table (and, consequently, the pivot chart) only show data from 2019. 
+Created timeline using the pivot chart. This timeline will allow us to filter the data using dates. For example, selecting Q1-Q4 of 2019 in the timeline will make the pivot table (and, consequently, the pivot chart) show data from 2019 only. 
 
 
 ### Step 11
-Created the colunm "Loyalty Card" using XLOOKUP function. This is the formula: 
+Created the column "Loyalty Card" using the XLOOKUP function. This is the formula: 
 
 =XLOOKUP([@[Customer ID]],customers!$A$1:$A$1001,customers!$I$1:$I$1001,,0)
 
 
 ### Step 12
-Inserted 3 slicers for "Size", "Roast Type Name" and "Loyalty Card". Theses slicers will also be used to filter the data in the dashboard. 
+Inserted 3 slicers for "Size", "Roast Type Name" and "Loyalty Card". These slicers will also be used to filter the data in the dashboard. 
 
 
 ### Step 13
-Copied the "TotalSales" worksheet and create a new worksheet which I renamed "CountryBarChart". Modified the pivot table by removing everything except "Sum of Sales" and added "Country". I then created a pivot chart using the data from the pivot table. This bar chart will show total sales for every country. 
+Copied the "TotalSales" worksheet and created a new worksheet which I renamed "CountryBarChart". Modified the pivot table by removing everything except "Sum of Sales" and added "Country". I then created a pivot chart using the data from the pivot table. This bar chart will show the total sales for every country. 
 
 
 ### Step 14
-Copied the "TotalSales" worksheet and create a new worksheet which I renamed "TopCustomers". Modified the pivot table by removing "Country" and added "Customer Name". Also, with the help of value filters feature, the pivot only shows the top 5 customers (customers with most sales). I then created a pivot chart using the data from the pivot table.
+Copied the "TotalSales" worksheet and created a new worksheet which I renamed "TopCustomers". Modified the pivot table by removing "Country" and added "Customer Name". Also, with the help of the value filters feature, the pivot table only shows the top 5 customers (customers with most sales). I then created a pivot chart using the data from the pivot table.
 
 
 ### Step 15
